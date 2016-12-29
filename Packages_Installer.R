@@ -1,4 +1,6 @@
-list.of.packages <- c("XML", "rvest", "Hmisc", "MASS","RevoUtilsMath", "RevoUtils","sparkTable",
+list.of.packages <- c("XML", "rvest", "Hmisc", "MASS",
+                      #"RevoUtilsMath", "RevoUtils",
+                      "sparkTable",
                      "rio", "psych","readr","data.table","magrittr","sparklyr", "Rfacebook","RColorBrewer","RCurl","httpuv","httr","rjson",
                       "shiny","flexdashboard","gmodels","janitor", "caret","ROCR",
                       "foreach","profvis","sqldf","reshape2","dplyr","zoo",
