@@ -27,6 +27,13 @@ f2n <- function(col){
 
 
 
+# This function converts factor column to char
+f2n <- function(col){
+  return(as.character(col))
+}
+
+
+
 # This function saves multiple dfs into one workbook
 save.xlsx <- function (file, ...)
 {
@@ -64,10 +71,10 @@ df.name.change <- function(df, original_names, new_names, range_match = F){
     fn_flag <- T
   }
   if (range_match){
-    if(length(grep(paste(original_names,collapse="|"), names(flat_data), value = T))!= length(new_names)){
+    if(length(grep(paste(original_names,collapse="|"), names(df), value = T))!= length(new_names)){
       print("# of matched names not equal to # of new names")
     }
-    names(df)[match(grep(paste(original_names,collapse="|"), names(flat_data), value = T), names(df))] <- new_names
+    names(df)[match(grep(paste(original_names,collapse="|"), names(df), value = T), names(df))] <- new_names
   }else{
     if(length(match(original_names, names(df)))!= length(new_names)){
       print("# of matched names not equal to # of new names")
