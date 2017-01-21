@@ -41,21 +41,21 @@ f2n <- function(col){
 
 
 
-<<<<<<< HEAD
+
 #' This function converts factor column to char
 #' #' @param col the column in a data frame
 #' @examples
 #' x$abc <- f2c(x$abc)
 #' @export
-=======
+
 # This function converts factor column to char
->>>>>>> 8b76579e403d756f0584bcf5d2a6c103b85ab3ce
+
 f2c <- function(col){
   return(as.character(col))
 }
 
 
-<<<<<<< HEAD
+
 local({
      r <- getOption("repos")
      r["CRAN"] <- "http://cran.rstudio.com"
@@ -66,10 +66,10 @@ local({
 #' @param file file path you wish to write to
 #' @param ... list of dfs you wish to write
 #' @export
-=======
+
 
 # This function saves multiple dfs into one workbook
->>>>>>> 8b76579e403d756f0584bcf5d2a6c103b85ab3ce
+
 save.xlsx <- function (file, ...)
 {
   wb <- createWorkbook()
@@ -114,7 +114,7 @@ df.name.change <- function(df, original_names, new_names, range_match = F, fixed
     fn_flag <- T
   }
   if (range_match){
-<<<<<<< HEAD
+
     if(invert){
       names(df)[match(grep(paste(original_names,collapse="|"), names(df), value = T, fixed = fixed, invert = invert), names(df))] <- new_names
     }else{
@@ -123,12 +123,12 @@ df.name.change <- function(df, original_names, new_names, range_match = F, fixed
       }
       names(df)[match(grep(paste(original_names,collapse="|"), names(df), value = T, fixed = fixed, invert = invert), names(df))] <- new_names
     }
-=======
+
     if(length(grep(paste(original_names,collapse="|"), names(df), value = T))!= length(new_names)){
       print("# of matched names not equal to # of new names")
     }
     names(df)[match(grep(paste(original_names,collapse="|"), names(df), value = T), names(df))] <- new_names
->>>>>>> 8b76579e403d756f0584bcf5d2a6c103b85ab3ce
+
   }else{
     if(length(match(original_names, names(df)))!= length(new_names)){
       print("#' of matched names not equal to #' of new names")

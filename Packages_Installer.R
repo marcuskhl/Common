@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #' installs necessary packages
 packages.installer <- function(){
   list.of.packages <- c(
@@ -27,7 +27,7 @@ packages.installer <- function(){
   }
   update_and_install(list.of.packages)
 
-=======
+
 list.of.packages <- c("XML", "rvest", "Hmisc", "MASS",
                       "sparkTable","jsonlite","rattle",
                      "rio", "psych","readr","data.table","magrittr","sparklyr", "Rfacebook","RColorBrewer","RCurl","httpuv","httr","rjson",
@@ -51,7 +51,6 @@ if(!is.na( match("Revo.version", ls(.BaseNamespaceEnv)))){
   lapply(list.of.packages, require, character.only = TRUE)
   setMKLthreads(4)
 }
->>>>>>> 8b76579e403d756f0584bcf5d2a6c103b85ab3ce
 
   cl <- makeCluster(4)  # might have to change it back to 2 for crappy laptops
   registerDoParallel(cl)
